@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tanish's Portfolio — frontend developer, creative coder and technology learner.">
+<meta name="theme-color" content="#080b18">
+<title>Tanish's Portfolio | Creative Developer</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{--bg:#080b18;--panel:rgba(18,25,48,.62);--line:rgba(150,180,255,.17);--text:#edf2ff;--muted:#a6b1cc;--cyan:#58e6ff;--violet:#a78bfa;--pink:#ff72c6}
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--bg);overflow-x:hidden;line-height:1.65}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 15% 10%,#172c55 0,transparent 40%),radial-gradient(ellipse at 85% 35%,#281744 0,transparent 38%),linear-gradient(145deg,#080b18,#0b1022 55%,#090b17)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.16;pointer-events:none;background-image:linear-gradient(rgba(120,160,255,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(120,160,255,.1) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,90%);margin:auto}
+header{position:fixed;top:14px;left:0;width:100%;z-index:20}.nav{width:min(1160px,94%);margin:auto;padding:12px 18px;border:1px solid var(--line);border-radius:18px;background:rgba(8,13,30,.72);backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:space-between;box-shadow:0 10px 40px #0004}
+.logo{font:700 1.1rem 'Space Grotesk';letter-spacing:-.5px}.logo span{color:var(--cyan)}.navlinks{display:flex;gap:25px;align-items:center}.navlinks a{font-size:.88rem;color:var(--muted);transition:.25s}.navlinks a:hover{color:var(--cyan)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 18px;border-radius:12px;background:linear-gradient(110deg,#54dff5,#9d8cff);color:#08101f;font-weight:700;border:0;cursor:pointer;box-shadow:0 8px 28px #58e6ff25;transition:.25s}.btn:hover,.nav-cta:hover{transform:translateY(-3px);filter:brightness(1.08)}.menu{display:none;background:none;border:0;color:white;font-size:1.5rem}
+section{padding:105px 0;scroll-margin-top:90px}.hero{min-height:100vh;display:flex;align-items:center;padding-top:130px}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}.eyebrow{display:inline-flex;gap:9px;align-items:center;padding:7px 13px;border:1px solid var(--line);border-radius:99px;background:#ffffff08;color:var(--cyan);font-size:.8rem;letter-spacing:1px;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:#69f0ae;box-shadow:0 0 12px #69f0ae}.hero h1{font:700 clamp(3rem,7vw,5.8rem)/1.02 'Space Grotesk';letter-spacing:-4px;margin:23px 0}.gradient{background:linear-gradient(100deg,var(--cyan),#b5a0ff 60%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:1.08rem;max-width:620px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn.secondary{background:#ffffff08;border:1px solid var(--line);color:var(--text);box-shadow:none}.mini-info{display:flex;gap:23px;flex-wrap:wrap;margin-top:34px;color:var(--muted);font-size:.88rem}.mini-info b{color:var(--text)}
+.orbit-card{position:relative;min-height:400px;display:grid;place-items:center;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,#ffffff0c,#ffffff03);backdrop-filter:blur(20px);overflow:hidden;box-shadow:0 30px 90px #0005}.orb{width:230px;height:230px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#a9f7ff,#597aff 35%,#7b4bd2 65%,#17132e 75%);box-shadow:0 0 80px #6c7dff66;position:relative;animation:float 5s ease-in-out infinite}.orb:before,.orb:after{content:"";position:absolute;border:1px solid #9befff80;border-radius:50%;inset:-30px;transform:rotateX(65deg) rotate(-25deg)}.orb:after{inset:-55px;transform:rotateX(65deg) rotate(55deg)}.float-tag{position:absolute;padding:9px 13px;border:1px solid var(--line);border-radius:12px;background:#101831cc;backdrop-filter:blur(10px);font-size:.8rem;color:#dce8ff}.tag1{top:18%;left:8%}.tag2{right:7%;top:30%}.tag3{bottom:15%;left:17%}@keyframes float{50%{transform:translateY(-15px)}}
+.section-head{margin-bottom:38px}.kicker{color:var(--cyan);text-transform:uppercase;letter-spacing:2px;font-size:.75rem;font-weight:700}.section-head h2{font:700 clamp(2rem,4vw,3.1rem) 'Space Grotesk';margin-top:8px;letter-spacing:-1.5px}.section-head p{color:var(--muted);max-width:650px;margin-top:10px}
+.glass{background:var(--panel);border:1px solid var(--line);backdrop-filter:blur(18px);border-radius:22px;box-shadow:0 18px 55px #0002}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}.about-copy{padding:30px}.about-copy p{color:var(--muted);margin:12px 0}.facts{padding:25px;display:grid;gap:14px}.fact{padding:14px;border-radius:14px;background:#ffffff06;border:1px solid #ffffff0b}.fact small{display:block;color:var(--muted);font-size:.75rem}.fact strong{font-size:.98rem}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.skill{padding:23px;transition:.25s}.skill:hover,.project:hover{transform:translateY(-5px);border-color:#58e6ff66}.skill-icon{font-size:1.6rem;margin-bottom:12px}.skill h3{font:600 1.05rem 'Space Grotesk'}.skill p{color:var(--muted);font-size:.86rem;margin-top:7px}.status{display:inline-block;margin-top:14px;padding:4px 9px;border-radius:99px;background:#58e6ff12;color:var(--cyan);font-size:.72rem}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{padding:24px;transition:.25s}.project-art{height:135px;border-radius:15px;margin-bottom:20px;display:grid;place-items:center;font:700 2rem 'Space Grotesk';color:#fff;background:linear-gradient(135deg,#152c50,#38245c 60%,#183d52);border:1px solid #ffffff15}.project:nth-child(2) .project-art{background:linear-gradient(135deg,#183b46,#254c83,#4c2867)}.project:nth-child(3) .project-art{background:linear-gradient(135deg,#33214e,#6c315c,#1d3457)}.project p{color:var(--muted);font-size:.9rem;margin:9px 0 15px}.chips{display:flex;gap:7px;flex-wrap:wrap}.chips span{font-size:.7rem;padding:4px 8px;border:1px solid var(--line);border-radius:7px;color:#cbd8f4}
+.timeline{padding:28px 30px}.step{position:relative;padding:0 0 28px 28px;border-left:1px solid #6276a5}.step:last-child{padding-bottom:0;border:0}.step:before{content:"";position:absolute;left:-5px;top:5px;width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}.step p{color:var(--muted);font-size:.9rem;margin-top:5px}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px}.contact-info{padding:28px}.contact-info p{color:var(--muted);margin:10px 0 22px}.contact-line{padding:13px 0;border-bottom:1px solid var(--line);color:#dce7ff}.contact-line span{display:block;color:var(--muted);font-size:.75rem}.contact-form{padding:28px}.field{margin-bottom:15px}.field label{display:block;font-size:.82rem;margin-bottom:7px;color:#cbd8f4}.field input,.field textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:11px;background:#080e20;color:white;font:inherit;outline:none}.field input:focus,.field textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #58e6ff13}.field textarea{min-height:125px;resize:vertical}.form-note{color:var(--muted);font-size:.75rem;margin-top:12px}
+footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.backtop{color:var(--cyan)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:850px){.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.orbit-card{min-height:320px}.skills{grid-template-columns:repeat(2,1fr)}.projects{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.navlinks{display:none;position:absolute;top:65px;left:3%;width:94%;padding:18px;border:1px solid var(--line);border-radius:15px;background:#0c1328;flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks a{padding:7px}.nav-cta{display:none}.menu{display:block}.hero h1{letter-spacing:-2px}.skills,.projects{grid-template-columns:1fr}section{padding:78px 0}.mini-info{gap:12px}.about-copy,.facts,.contact-info,.contact-form{padding:22px}}
+</style>
+</head>
+<body>
+<header><nav class="nav">
+  <a class="logo" href="#home">TANISH<span>.</span></a>
+  <div class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+  <a class="nav-cta" href="#contact">Let's connect ↗</a>
+  <button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+</nav></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+ <div class="reveal"><div class="eyebrow"><i class="dot"></i> Available for learning & projects</div>
+  <h1>Hi, I'm <span class="gradient">Tanish.</span><br>Creative Coder<span class="gradient">_</span></h1>
+  <p>I build clean, modern and interactive web experiences. I enjoy turning ideas into websites using HTML, CSS and JavaScript — and I'm always exploring what's next.</p>
+  <div class="actions"><a class="btn" href="#projects">Explore my work ↗</a><a class="btn secondary" href="#contact">Contact me</a></div>
+  <div class="mini-info"><span>⌁ <b>Frontend Development</b></span><span>⌁ <b>Python & SQL learner</b></span><span>⌁ <b>India</b></span></div>
+ </div>
+ <div class="orbit-card reveal"><div class="orb"></div><span class="float-tag tag1"> &lt; HTML /&gt;</span><span class="float-tag tag2">CSS ✦</span><span class="float-tag tag3">JavaScript { }</span></div>
+</div></section>
+<section id="about"><div class="wrap"><div class="section-head reveal"><div class="kicker">01 / About me</div><h2>A little about <span class="gradient">my journey.</span></h2><p>Curious mind. Creative ideas. A passion for technology.</p></div>
+<div class="about-grid"><article class="glass about-copy reveal"><h3>Building my skills, one project at a time.</h3><p>I'm Tanish, a student and aspiring web developer based in Bhiwandi, Maharashtra. I enjoy learning how websites work and creating polished digital experiences that feel simple, useful and memorable.</p><p>I currently work with HTML, CSS and JavaScript. I'm also learning Python and SQL to understand programming and data from a wider perspective.</p><p>My goal is to keep improving, build meaningful projects and help people bring their website ideas to life.</p></article>
+<aside class="glass facts reveal"><div class="fact"><small>BASED IN</small><strong>Bhiwandi, Maharashtra, India</strong></div><div class="fact"><small>CURRENT ROLE</small><strong>Student · Aspiring Developer</strong></div><div class="fact"><small>LEARNING NEXT</small><strong>Python · SQL</strong></div><div class="fact"><small>MY APPROACH</small><strong>Curiosity + Consistency</strong></div></aside></div></div></section>
+<section id="skills"><div class="wrap"><div class="section-head reveal"><div class="kicker">02 / Tech stack</div><h2>Tools I use to <span class="gradient">create.</span></h2><p>My current toolkit and the technologies I'm exploring.</p></div>
+<div class="skills">
+ <article class="glass skill reveal"><div class="skill-icon">🌐</div><h3>HTML5</h3><p>Semantic structure, accessible content and clean page layouts.</p><span class="status">Comfortable</span></article>
+ <article class="glass skill reveal"><div class="skill-icon">🎨</div><h3>CSS3</h3><p>Responsive layouts, animations, glass effects and modern styling.</p><span class="status">Comfortable</span></article>
+ <article class="glass skill reveal"><div class="skill-icon">⚡</div><h3>JavaScript</h3><p>DOM interactions, dynamic UI and interactive web features.</p><span class="status">Learning & building</span></article>
+ <article class="glass skill reveal"><div class="skill-icon">🐍</div><h3>Python</h3><p>Exploring programming fundamentals and problem solving.</p><span class="status">Currently learning</span></article>
+ <article class="glass skill reveal"><div class="skill-icon">🗄️</div><h3>SQL</h3><p>Learning databases, queries and structured information.</p><span class="status">Currently learning</span></article>
+ <article class="glass skill reveal"><div class="skill-icon">📱</div><h3>Responsive Design</h3><p>Making layouts adapt to mobile, tablet and desktop screens.</p><span class="status">Practising</span></article>
+ <article class="glass skill reveal"><div class="skill-icon">🧩</div><h3>Problem Solving</h3><p>Breaking ideas into smaller steps and learning by doing.</p><span class="status">Always improving</span></article>
+ <article class="glass skill reveal"><div class="skill-icon">✨</div><h3>UI Creativity</h3><p>Exploring typography, visual hierarchy and user-friendly design.</p><span class="status">Always exploring</span></article>
+</div></div></section>
+<section id="projects"><div class="wrap"><div class="section-head reveal"><div class="kicker">03 / Selected work</div><h2>Ideas into <span class="gradient">experiences.</span></h2><p>A few example project concepts. Replace these cards with your real projects as you build them.</p></div>
+<div class="projects">
+ <article class="glass project reveal"><div class="project-art">01 / WEB</div><h3>Personal Portfolio</h3><p>A responsive personal website with a modern interface, smooth navigation and contact section.</p><div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></article>
+ <article class="glass project reveal"><div class="project-art">02 / UI</div><h3>Glass Dashboard</h3><p>A futuristic dashboard concept focused on clean cards, visual hierarchy and interactive elements.</p><div class="chips"><span>CSS Grid</span><span>Glass UI</span><span>JS</span></div></article>
+ <article class="glass project reveal"><div class="project-art">03 / LAB</div><h3>Learning Lab</h3><p>A space to experiment with small coding ideas while learning Python, SQL and web development.</p><div class="chips"><span>Python</span><span>SQL</span><span>Practice</span></div></article>
+</div></div></section>
+<section id="journey"><div class="wrap"><div class="section-head reveal"><div class="kicker">04 / My journey</div><h2>Learning never <span class="gradient">stops.</span></h2></div>
+<div class="glass timeline reveal"><div class="step"><h3>Building web foundations</h3><p>Learning HTML structure, CSS styling and JavaScript fundamentals through hands-on practice.</p></div><div class="step"><h3>Exploring Python</h3><p>Developing programming logic and understanding how to write useful scripts.</p></div><div class="step"><h3>Discovering SQL</h3><p>Learning how databases store, organise and retrieve information.</p></div><div class="step"><h3>What's next?</h3><p>Creating more projects, improving design skills and growing as a developer.</p></div></div></div></section>
+<section id="contact"><div class="wrap"><div class="section-head reveal"><div class="kicker">05 / Contact</div><h2>Have an idea? Let's <span class="gradient">build it.</span></h2><p>If you'd like a modern portfolio or a clean website for your idea, feel free to reach out.</p></div>
+<div class="contact-grid"><div class="glass contact-info reveal"><h3>Let's talk about your project.</h3><p>Share what you have in mind. We can discuss the design, features and how to bring your idea online.</p><div class="contact-line"><span>LOCATION</span>Bhiwandi, Maharashtra, India</div><div class="contact-line"><span>EMAIL</span><b id="emailDisplay">Add your email in the code</b></div><div class="contact-line"><span>INTERESTS</span>Portfolio websites · Frontend UI · Learning</div></div>
+<form class="glass contact-form reveal" id="contactForm"><div class="field"><label for="name">Your name</label><input id="name" name="name" placeholder="Enter your name" required></div><div class="field"><label for="email">Your email</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div><div class="field"><label for="message">Tell me about your idea</label><textarea id="message" name="message" placeholder="I'd like to discuss a website..." required></textarea></div><button class="btn" type="submit">Prepare message ↗</button><p class="form-note">This opens your email app with the message prepared. Add your email address in the JavaScript setting below first.</p></form></div></div></section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Tanish's Portfolio. Crafted with curiosity.</span><span>Designed & built with HTML · CSS · JavaScript</span><a class="backtop" href="#home">Back to top ↑</a></div></footer>
+<script>
+/* IMPORTANT: Replace this with an email address you are comfortable publishing.
+   Consider using a parent/guardian-approved contact address if you are under 18. */
+const CONTACT_EMAIL = "your-email@example.com";
+
+document.getElementById("year").textContent = new Date().getFullYear();
+const menu = document.getElementById("menu");
+const links = document.getElementById("navlinks");
+menu.addEventListener("click", () => {
+  const open = links.classList.toggle("open");
+  menu.setAttribute("aria-expanded", String(open));
+  menu.textContent = open ? "✕" : "☰";
+});
+links.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+  links.classList.remove("open"); menu.setAttribute("aria-expanded","false"); menu.textContent="☰";
+}));
+const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+  if(entry.isIntersecting){ entry.target.classList.add("visible"); observer.unobserve(entry.target); }
+}), {threshold:.12});
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+const display = document.getElementById("emailDisplay");
+if(CONTACT_EMAIL !== "your-email@example.com") display.textContent = CONTACT_EMAIL;
+document.getElementById("contactForm").addEventListener("submit", event => {
+  event.preventDefault();
+  if(CONTACT_EMAIL === "your-email@example.com"){
+    alert("Please add your email address to CONTACT_EMAIL in the JavaScript section before using the contact form.");
+    return;
+  }
+  const data = new FormData(event.currentTarget);
+  const subject = encodeURIComponent("Portfolio enquiry from " + data.get("name"));
+  const body = encodeURIComponent("Name: " + data.get("name") + "\nEmail: " + data.get("email") + "\n\n" + data.get("message"));
+  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+});
+</script>
+</body>
+</html>
